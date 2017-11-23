@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_TicTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="300" Width="525">
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+
+            <Button Height="90" x:Name="btnTopLeft" Click="btnTopLeft_Click">
+                <Image x:Name="ImgTopLeft"/>
+            </Button>
+            <Button Height="90" x:Name="btnMidLeft" Click="btnMidLeft_Click">
+                <Image x:Name="ImgMidLeft"/>
+            </Button>
+            <Button Height="90" x:Name="btnBotLeft" Click="btnBotLeft_Click">
+                <Image x:Name="ImgBotLeft"/>
+            </Button>
+
+        </StackPanel>
         
+        <StackPanel Grid.Column="1">
+
+            <Button Height="90" x:Name="btnMidTop">
+                <Image x:Name="ImgMidTop"/>
+            </Button>
+            <Button Height="90" x:Name="btnMid">
+                <Image x:Name="ImgMid"/>
+            </Button>
+            <Button Height="90" x:Name="btnMidBot">
+                <Image x:Name="ImgMidBot"/>
+            </Button>
+
+        </StackPanel>
+        
+        <StackPanel Grid.Column="2">
+
+            <Button Height="90"/>
+            <Button Height="90"/>
+            <Button Height="90"/>
+
+        </StackPanel>
+        
+
     </Grid>
 </Window>
