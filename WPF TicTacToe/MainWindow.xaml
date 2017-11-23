@@ -15,42 +15,48 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
-            <Button Height="90" x:Name="btnTopLeft" Click="btnTopLeft_Click">
-                <Image x:Name="ImgTopLeft"/>
-            </Button>
-            <Button Height="90" x:Name="btnMidLeft" Click="btnMidLeft_Click">
-                <Image x:Name="ImgMidLeft"/>
-            </Button>
-            <Button Height="90" x:Name="btnBotLeft" Click="btnBotLeft_Click">
-                <Image x:Name="ImgBotLeft"/>
-            </Button>
 
-        </StackPanel>
-        
-        <StackPanel Grid.Column="1">
+        <Button Grid.Column="0" Grid.Row="0" x:Name="btnTopLeft" Click="btnTopLeft_Click">
+            <Image x:Name="ImgTopLeft" Stretch="Fill"/>
+        </Button>
 
-            <Button Height="90" x:Name="btnMidTop">
-                <Image x:Name="ImgMidTop"/>
-            </Button>
-            <Button Height="90" x:Name="btnMid">
-                <Image x:Name="ImgMid"/>
-            </Button>
-            <Button Height="90" x:Name="btnMidBot">
-                <Image x:Name="ImgMidBot"/>
-            </Button>
+        <Button Grid.Column="0" Grid.Row="1" x:Name="btnMidLeft" Click="btnMidLeft_Click">
+            <Image x:Name="ImgMidLeft" Stretch="Fill"/>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" x:Name="btnBotLeft" Click="btnBotLeft_Click">
+            <Image x:Name="ImgBotLeft" Stretch="Fill"/>
+        </Button>
 
-        </StackPanel>
-        
-        <StackPanel Grid.Column="2">
 
-            <Button Height="90"/>
-            <Button Height="90"/>
-            <Button Height="90"/>
+        <Button Grid.Column="1" Grid.Row="0" x:Name="btnMidTop" Click="btnMidTop_Click">
+            <Image x:Name="ImgMidTop" Stretch="Fill"/>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" x:Name="btnMid" Click="btnMid_Click">
+            <Image x:Name="ImgMid" Stretch="Fill"/>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="btnMidBot" Click="btnMidBot_Click">
+            <Image x:Name="ImgMidBot" Stretch="Fill"/>
+        </Button>
 
-        </StackPanel>
-        
 
+        <Button Grid.Column="2" Grid.Row="0" x:Name="btnRightTop" Click="btnRightTop_Click">
+            <Image x:Name="ImgRightTop" Stretch="Fill"/>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="1" x:Name="btnRightMid" Click="btnRightMid_Click">
+            <Image x:Name="ImgRightMid" Stretch="Fill"/>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" x:Name="btnRightBot" Click="btnRightBot_Click">
+            <Image x:Name="ImgRightBot" Stretch="Fill"/>
+        </Button>
+
+        <Button Grid.Column="3" Grid.Row="0" Content="Restart" FontSize="36" FontWeight="Bold" Click="Button_Click" />
+
+        <TextBlock Grid.Column="3" Grid.Row="3" x:Name="txtWin"/>
     </Grid>
 </Window>
