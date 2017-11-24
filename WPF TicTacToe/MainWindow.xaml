@@ -56,7 +56,17 @@
         </Button>
 
         <Button Grid.Column="3" Grid.Row="0" Content="Restart" FontSize="36" FontWeight="Bold" Click="Button_Click" />
-
+        <Popup x:Name="popup" Placement="Center">
+            <Grid Background="Aquamarine">
+                <StackPanel>
+                    <TextBlock x:Name="txtPopup"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"
+                       />
+                    <Button Content="This is button on a Pupup" Click="Button_Click_1" />
+                </StackPanel>
+            </Grid>
+        </Popup>
         <TextBlock Grid.Column="3" Grid.Row="3" x:Name="txtWin"/>
     </Grid>
 </Window>
