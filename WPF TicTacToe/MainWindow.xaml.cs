@@ -24,6 +24,7 @@ namespace WPF_TicTacToe
         public bool PlayerTurn = true;
         public int[] WinCheck = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,12 +32,15 @@ namespace WPF_TicTacToe
 
         private void btnTopLeft_Click(object sender, RoutedEventArgs e)
         {
+            Image button = (Image)((Button)sender).Content;
+            string Name = ((Button)sender).Name;
+            ArrayConverter(Name);
+
             if (PlayerTurn == true)
             {
-                ImgTopLeft.Source = new BitmapImage(new Uri("Images/Circle.png", UriKind.Relative));
+                button.Source = new BitmapImage(new Uri("Images/Circle.png", UriKind.Relative));
                 ImgTopLeft.Visibility = Visibility.Visible;
                 btnTopLeft.IsEnabled = false;
-                PlayerTurn = false;
                 WinCheck[0] = 1;
             }
             else
@@ -44,9 +48,9 @@ namespace WPF_TicTacToe
                 ImgTopLeft.Source = new BitmapImage(new Uri("Images/Cross.png", UriKind.Relative));
                 ImgTopLeft.Visibility = Visibility.Visible;
                 btnTopLeft.IsEnabled = false;
-                PlayerTurn = true;
                 WinCheck[0] = 2;
             }
+            PlayerTurn = !PlayerTurn;
             WinChecker();
         }
 
@@ -251,7 +255,7 @@ namespace WPF_TicTacToe
             else if (WinCheck[0] == 2 && WinCheck[1] == 2 && WinCheck[2] == 2 || WinCheck[3] == 2 && WinCheck[4] == 2 && WinCheck[5] == 2 || WinCheck[6] == 2 && WinCheck[7] == 2 && WinCheck[8] == 2 ||
                 WinCheck[0] == 2 && WinCheck[4] == 2 && WinCheck[8] == 2 || WinCheck[2] == 2 && WinCheck[4] == 2 && WinCheck[6] == 2 ||
                 WinCheck[0] == 2 && WinCheck[3] == 2 && WinCheck[6] == 2 || WinCheck[1] == 2 && WinCheck[4] == 2 && WinCheck[7] == 2 || WinCheck[2] == 2 && WinCheck[5] == 2 && WinCheck[8] == 2)
-            {
+                 {
                 txtWin.Text = "Player 2 Wins";
                 btnTopLeft.IsEnabled = false;
                 btnMidLeft.IsEnabled = false;
@@ -265,7 +269,7 @@ namespace WPF_TicTacToe
                 txtPopup.Text = "P2 Wins!!";
                 popup.IsOpen = true;
 
-            }
+                 }
             else if (WinCheck[0] >= 1 && WinCheck[1] >= 1 && WinCheck[2] >= 1 && WinCheck[3] >= 1 && WinCheck[4] >= 1 && WinCheck[5] >= 1 && WinCheck[6] >= 1 && WinCheck[7] >= 1 && WinCheck[8] >= 1)
             {
                 txtWin.Text = "Tie!";
@@ -273,10 +277,18 @@ namespace WPF_TicTacToe
 
         }
 
+        private void ArrayConverter(string sender)
+        {
+            switch (sender)
+            {
+                case "btnTopLeft":
+
+                    break;
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
             btnTopLeft.IsEnabled = true;
             btnMidLeft.IsEnabled = true;
             btnBotLeft.IsEnabled = true;
