@@ -22,7 +22,7 @@ namespace WPF_TicTacToe
     public partial class MainWindow : Window
     {
         public bool PlayerTurn = true;
-        public int[] WinCheck = { 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        public int[] WinCheck = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
         public MainWindow()
         {
@@ -47,7 +47,6 @@ namespace WPF_TicTacToe
                 PlayerTurn = true;
                 WinCheck[0] = 2;
             }
-
             WinChecker();
         }
 
@@ -72,7 +71,7 @@ namespace WPF_TicTacToe
 
             WinChecker();
         }
-        
+
         private void btnBotLeft_Click(object sender, RoutedEventArgs e)
         {
             if (PlayerTurn == true)
@@ -266,7 +265,8 @@ namespace WPF_TicTacToe
                 txtPopup.Text = "P2 Wins!!";
                 popup.IsOpen = true;
 
-            } else if(WinCheck[0] >= 1 && WinCheck[1] >= 1 && WinCheck[2] >= 1 && WinCheck[3] >= 1 && WinCheck[4] >= 1 && WinCheck[5] >= 1 && WinCheck[6] >= 1 && WinCheck[7] >= 1 && WinCheck[8] >= 1)
+            }
+            else if (WinCheck[0] >= 1 && WinCheck[1] >= 1 && WinCheck[2] >= 1 && WinCheck[3] >= 1 && WinCheck[4] >= 1 && WinCheck[5] >= 1 && WinCheck[6] >= 1 && WinCheck[7] >= 1 && WinCheck[8] >= 1)
             {
                 txtWin.Text = "Tie!";
             }
@@ -313,7 +313,7 @@ namespace WPF_TicTacToe
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Button_Click(sender , e);
+            Button_Click(sender, e);
             popup.IsOpen = false;
         }
     }
