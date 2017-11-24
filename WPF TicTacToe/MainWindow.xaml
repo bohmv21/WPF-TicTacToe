@@ -22,41 +22,41 @@
         </Grid.RowDefinitions>
 
 
-        <Button Grid.Column="0" Grid.Row="0" x:Name="btnTopLeft" Click="btnTopLeft_Click">
+        <Button Grid.Column="0" Grid.Row="0" x:Name="_0" Click="Default_Click">
             <Image x:Name="ImgTopLeft" Stretch="Fill"/>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="1" x:Name="btnMidLeft" Click="btnMidLeft_Click">
+        <Button Grid.Column="0" Grid.Row="1" x:Name="_1" Click="Default_Click">
             <Image x:Name="ImgMidLeft" Stretch="Fill"/>
         </Button>
-        <Button Grid.Column="0" Grid.Row="2" x:Name="btnBotLeft" Click="btnBotLeft_Click">
+        <Button Grid.Column="0" Grid.Row="2" x:Name="_2" Click="Default_Click">
             <Image x:Name="ImgBotLeft" Stretch="Fill"/>
         </Button>
 
 
-        <Button Grid.Column="1" Grid.Row="0" x:Name="btnMidTop" Click="btnMidTop_Click">
+        <Button Grid.Column="1" Grid.Row="0" x:Name="_3" Click="Default_Click">
             <Image x:Name="ImgMidTop" Stretch="Fill"/>
         </Button>
-        <Button Grid.Column="1" Grid.Row="1" x:Name="btnMid" Click="btnMid_Click">
+        <Button Grid.Column="1" Grid.Row="1" x:Name="_4" Click="Default_Click">
             <Image x:Name="ImgMid" Stretch="Fill"/>
         </Button>
-        <Button Grid.Column="1" Grid.Row="2" x:Name="btnMidBot" Click="btnMidBot_Click">
+        <Button Grid.Column="1" Grid.Row="2" x:Name="_5" Click="Default_Click">
             <Image x:Name="ImgMidBot" Stretch="Fill"/>
         </Button>
 
 
-        <Button Grid.Column="2" Grid.Row="0" x:Name="btnRightTop" Click="btnRightTop_Click">
+        <Button Grid.Column="2" Grid.Row="0" x:Name="_6" Click="Default_Click">
             <Image x:Name="ImgRightTop" Stretch="Fill"/>
         </Button>
-        <Button Grid.Column="2" Grid.Row="1" x:Name="btnRightMid" Click="btnRightMid_Click">
+        <Button Grid.Column="2" Grid.Row="1" x:Name="_7" Click="Default_Click">
             <Image x:Name="ImgRightMid" Stretch="Fill"/>
         </Button>
-        <Button Grid.Column="2" Grid.Row="2" x:Name="btnRightBot" Click="btnRightBot_Click">
+        <Button Grid.Column="2" Grid.Row="2" x:Name="_8" Click="Default_Click">
             <Image x:Name="ImgRightBot" Stretch="Fill"/>
         </Button>
 
-        <Button Grid.Column="3" Grid.Row="0" Content="Restart" FontSize="36" FontWeight="Bold" Click="Button_Click" />
-
+        <Button Grid.Column="3" Grid.Row="0" Content="Restart" FontSize="36" FontWeight="Bold" Click="Reset_Click" />
+        <Image Grid.Column="3" Grid.Row="1" x:Name="imgTurn" />
 
         <Popup x:Name="popup" Placement="Center">
             <Grid Background="Aquamarine" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="100">
