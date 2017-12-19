@@ -5,13 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HamAndEggs_.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="500" d:DesignWidth="525"
       Title="Menu">
 
     <Grid>
+
         <StackPanel VerticalAlignment="Stretch">
-            <DataGrid x:Name="myDataGrid" Margin="0,0,0,0" Height="Auto" VerticalAlignment="Stretch" SelectionChanged="myDataGrid_SelectionChanged"/>
-            <TextBlock x:Name="Receipt"></TextBlock>
-        </StackPanel>    
+            <DataGrid x:Name="myDataGrid" Height="Auto" SelectionChanged="myDataGrid_SelectionChanged" MinHeight="50"/>
+            <TextBlock x:Name="Receipt" Text="Receipt"></TextBlock>
+            <DataGrid x:Name="ReceiptGrid" Height="200" CanUserAddRows="False"/>
+            <Grid Margin="0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <Button x:Name="btnReserveTable" Content="Reserve Table" Click="btnReserveTable_Click" Margin="0,0,100,0"/>
+                <Button x:Name="btnClearReceipt" Grid.Column="1" Content="Clear Receipt" Margin="50,0,50,0" Click="btnClearReceipt_Click"/>
+                <Button x:Name="btnReceipt" Grid.Column="2" Content="Print Receipt" Click="btnReceipt_Click" Margin="100,0,0,0"/>
+                
+                
+                
+            </Grid>
+            <TextBox x:Name="txtReceipt" ></TextBox>
+        </StackPanel>
     </Grid>
 </Page>

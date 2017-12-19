@@ -29,9 +29,8 @@ namespace HamAndEggs_.Pages
         public void Default_Click(object sender, RoutedEventArgs e)
         {
             btnCt = ((Button)sender).Content.ToString();
-
-            MainWindow.AppWindow.GoToMenuPage(sender , e);
             MainWindow.AppWindow.btnContent = btnCt;
+            MainWindow.AppWindow.GoToMenuPage(sender, e);
         }
     }
 }
